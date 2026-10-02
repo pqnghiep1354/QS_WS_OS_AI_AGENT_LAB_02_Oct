@@ -1,0 +1,72 @@
+{
+  "orders": [
+    {
+      "order_id": "QS-1001",
+      "customer": "Alice Johnson",
+      "sku": "HPH-01",
+      "product": "Wireless Headphones",
+      "status": "delivered",
+      "delivered_date": "2026-09-26",
+      "eta": null,
+      "price_usd": 79.99,
+      "issue": "damaged"
+    },
+    {
+      "order_id": "QS-1002",
+      "customer": "Brian Lee",
+      "sku": "BAG-02",
+      "product": "Travel Backpack",
+      "status": "shipped",
+      "delivered_date": null,
+      "eta": "2026-10-03",
+      "price_usd": 49.99,
+      "issue": null
+    },
+    {
+      "order_id": "QS-1003",
+      "customer": "Carla Gomez",
+      "sku": "KBD-03",
+      "product": "Mechanical Keyboard",
+      "status": "delivered",
+      "delivered_date": "2026-09-24",
+      "eta": null,
+      "price_usd": 99.0,
+      "issue": "not working"
+    }
+  ],
+  "inventory": [
+    {
+      "sku": "HPH-01",
+      "product": "Wireless Headphones",
+      "stock": 8
+    },
+    {
+      "sku": "BAG-02",
+      "product": "Travel Backpack",
+      "stock": 12
+    },
+    {
+      "sku": "KBD-03",
+      "product": "Mechanical Keyboard",
+      "stock": 0
+    }
+  ],
+  "policies": [
+    {
+      "policy_name": "Damaged item replacement",
+      "policy_text": "A delivered item reported damaged within 30 days may be replaced if replacement stock is available. Human approval is required before creating the replacement."
+    },
+    {
+      "policy_name": "Refund approval",
+      "policy_text": "Refunds require human approval. The agent may prepare a refund request but must not issue a refund automatically."
+    },
+    {
+      "policy_name": "Shipped order status",
+      "policy_text": "For orders that are still in transit, provide the current status and ETA. Do not create a replacement until the order is delivered unless a separate exception policy applies."
+    },
+    {
+      "policy_name": "Out-of-stock replacement",
+      "policy_text": "If an eligible replacement item has zero stock, do not promise immediate replacement. Create or recommend a support ticket for manual follow-up."
+    }
+  ]
+}
